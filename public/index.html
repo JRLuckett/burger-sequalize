@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Eat Da Burger</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" media="screen">
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div  class="col-md-12">
+              <img id="burger" src="https://cdn1.vox-cdn.com/uploads/chorus_image/image/38662304/1374266_1425192024375093_943955857_n.0.jpg" alt="burger">
+            </div>
+        </div>
+        <div class="row">
+            <div id="eat" class="col-md-4">
+                <div class="panel panel-default">
+                    <div id="panel-eat" class="panel-heading">Eat</div>
+                    <div class="panel-body">
+                        <h5>Double Double</h5>
+                        <a class="btn btn-primary btn-md" href="#" role="button">Eat</a>
+                    </div>
+                </div>
+            </div>
+            <div id="create" class="col-md-4">
+                <div class="input-group">
+                    <span class="input-group-btn">
+            <button id="submit" class="btn btn-default" type="button">New Burger</button>
+          </span>
+                    <input id="new-burger" type="text" class="form-control" placeholder="add burger...">
+                </div>
+            </div>
+            <div id="eaten" class="col-md-4">
+                <div class="panel panel-default">
+                    <div id="panel-eaten" class="panel-heading">Eaten</div>
+                    <div class="panel-body">
+                        Chicken Burger
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/burger.js" type="text/javascript"></script>
+</body>
+
+</html>

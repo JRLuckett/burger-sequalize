@@ -1,0 +1,40 @@
+
+body{
+  margin-top: 5vh;
+}
+.container{
+  background-color: #A6FFF2;
+  border-radius: 5px;
+}
+#burger{
+  display: block;
+  margin: 0 auto;
+  width: 25vw;
+}
+.panel-default{
+  background-color: #FB7857;
+  border-color: #2C3E50;
+}
+#panel-eat{
+  border-bottom: 1px solid #2C3E50;
+}
+#panel-eaten{
+  border-bottom: 1px solid #2C3E50;
+}
+.btn{
+  padding: 11px 15px;
+  color: #2C3E50;
+  border: 1px solid #2C3E50;
+  background-color: #FA5D53;
+  margin-left: 30px;
+}
+.btn-primary{
+  float: right;
+}
+h5{
+  display: inline-block;;
+}
+.form-control{
+  background-color: #ECF0F1;
+  border: 1px solid #2C3E50;
+}
