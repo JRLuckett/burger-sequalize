@@ -1,23 +1,28 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-var db = require("./models");
-require("./routes/burger-routes.js")(app);
+var express = require('express');
+var methodOverride = require('method-override');
+var bodyParser = require('body-parser');
+var exphbs = require('express-handlebars');
 
 var app = express();
-var PORT = process.env.PORT || 8080;
+var db = require("./models");
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+var routes = require('./controller/burger-controller.js');
 
-app.use(express.static("./public"));
+app.use(express.static('public'));
 
+app.use(bodyParser.urlencoded({
+	extended: false
+}));
 
+app.use(methodOverride('_method'));
 
-// Syncing our sequelize models and then starting our express app
-db.sequelize.sync({ force: true }).then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
-});
+app.engine('handlebars', exphbs({
+	defaultLayout: 'main'
+}));
+app.set('view engine', 'handlebars');
+
+app.use('/', routes);
+
+app.listen(process.env.PORT || 3000);
+
+db.sequelize.sync();
